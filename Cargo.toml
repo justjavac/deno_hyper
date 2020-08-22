@@ -1,0 +1,19 @@
+[package]
+name = "deno_hyper"
+version = "0.1.0"
+authors = ["迷渡 <justjavac@gmail.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+deno_core = "0.54.0"
+futures = "0.3.5"
+hyper = "0.13"
+tokio = { version = "0.2", features = ["full"] }
+
+[profile.release]
+codegen-units = 1
+lto = true
+panic = "abort"
