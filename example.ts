@@ -1,4 +1,5 @@
 import { run } from "./mod.ts";
 
-run();
+const server = run();
 console.log("server is running.");
+await server;
